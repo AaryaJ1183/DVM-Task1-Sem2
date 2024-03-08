@@ -1,0 +1,328 @@
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "Fredoka", sans-serif;
+}
+body{
+    /* background-color: #080b2f; */
+    /* background-image: url('bg gradient.png'); */
+    /* overflow: hidden; */
+    position: relative;
+}
+
+#nav-div
+{   display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+
+    height:80px;
+    background-color: #E1F2FE;
+    z-index: 3;
+    position: relative;
+    top: -80px;
+    background: rgb(222,238,255);
+}
+.fa-bars
+{
+    padding:0 2px 0 2px;
+    border-radius: 50%;
+    color: aliceblue;
+    /* background-color: white; */
+}
+.nav-btn-div
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-btn
+{
+    padding:20px;
+    border-radius: 50%;
+    border:none;
+    background-color: #21A179;
+    z-index:5;
+    transition: all .75s;
+
+    position: absolute;
+    top:10px;
+}
+.nav-btn:hover
+{
+    background-color: #34D5A2;
+    transform: scale(1.15);
+    /* transform: translateY(10px); */
+}
+.nav-search-div
+{
+    display: flex;
+    align-items: center;
+    /* background-color: #a5a5a5; */
+    /* position: relative; */  
+}
+.fa-magnifying-glass
+{
+    font-size: 20px;
+    background-color: #a5a5a5;
+    padding: 4px;
+    padding-right: 10px;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.nav-search
+{
+    font-size: 20px;
+    border:none;
+    background-color: #a5a5a5;
+    padding:2px;
+    border-radius: 0 2rem 2rem 0;
+
+}
+.nav-options-acc
+{
+    font-size: 20px;
+    border:none;
+    border-radius: .5rem;
+    background-color: #21A179;
+    padding:10px; 
+
+    position: relative;
+    left:200px;
+}
+.nav-options-link
+{
+    text-decoration:none;
+    font-size: 20px;
+
+    position: relative;
+    left:150px;
+    margin:20px;
+}
+.bg-image
+{
+    position: relative;
+    top:-80px;
+    /* overflow-x: hidden; */
+    object-fit: cover;
+    z-index:-5;
+    width:100%;
+    height:100vh;
+}
+
+
+/* ----------x----------x----------x----------x----------x----------x----------x----------x---------- */
+/* HERO IMAGE */
+.maha-image
+{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.images
+{   
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position:absolute;
+    /* background-color: #e34525; */
+    animation-name: bookAnimation;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    overflow-x: hidden;
+}
+.commonFloatImage
+{   
+    height:40vh;
+    margin:1vh;
+    border-radius: 2rem;
+    position: relative;
+}
+
+@keyframes bookAnimation {
+    from{ transform: translateX(25vw);}
+    to{ transform: translateX(50vw);}
+}
+/* ----------x----------x----------x----------x----------x----------x----------x----------x---------- */
+.hero-text
+{
+    z-index: 10;
+    color: wheat;
+    font-size: 100px;
+    position: absolute;
+    top:0;
+    font-family:"Roboto Slab", serif;
+}
+.hero-subtext
+{
+    color: #e34525;
+    font-family:"Roboto Slab", serif;
+    font-size: 30px;
+    position: absolute;
+}
+#hero-subtext1
+{
+    position: absolute;
+    top:435px;
+    left:60px;
+}
+#hero-subtext2
+{
+    position: absolute;
+    top:470px;
+    left:65px;
+}
+#hero-text1
+{
+    font-size: 80px;
+    position: absolute;
+    top:200px;   
+    left:40px;
+}
+#hero-text2
+{
+    font-size: 100px;
+    position: absolute;
+    top:290px;   
+    left:40px;
+}
+
+.browse-div
+{   
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:550px;
+    left:300px;
+    
+    
+}
+.nav-options-acc:hover
+{
+    background-color: rgb(175, 20, 20);
+    color:white;
+}
+.fa-shuttle-space
+{
+    color: rgb(227, 160, 98);
+    font-size: 30px;
+    position: relative;
+    transition: all 0.5s;
+    z-index:5;
+    /* right:30px; */
+}
+.browse-button
+{
+    color: black;
+    background-color: #f9a099;
+    font-size: 25px;
+    border:none;
+    padding:12px 15px;
+    border-radius: 0.8rem;
+    position: relative;
+    left:25px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.browse-div:hover .browse-button
+{
+    transform: translateX(-80px);
+    background-color: rgb(230, 108, 99);
+}
+
+.browse-div:hover .fa-shuttle-space
+{
+    transform: translateX(+120px) rotate(-45deg);
+}
+
+/* MEDIA */
+@media (width<=1150px)
+{
+    #hero-text1
+    {
+        font-size:50px;
+        position: absolute;
+        top:230px;
+    }
+    #hero-text2
+    {
+        font-size:70px;
+    }
+    #hero-subtext1
+    {
+      font-size: 20px;
+      position: absolute;
+      bottom:50px;
+      left:50px;
+    }
+    #hero-subtext2
+    {
+      font-size: 20px;
+      left:50px;
+    }
+
+    
+}
+@media (width<=850px)
+{
+    #hero-text1
+    {
+        font-size:30px;
+        position: absolute;
+        top:300px;
+    }
+    #hero-text2
+    {
+        font-size:50px;
+        top:340px;
+    }
+    #hero-subtext1
+    {
+      font-size: 20px;
+      /* position: absolute; */
+      left:50px;
+    }
+    #hero-subtext2
+    {
+      font-size: 20px;
+      left:50px;
+      /* WHY IS BOTTOM / TOP NOT WORKING?? */
+    }
+    .browse-div
+    {
+        position: absolute;
+        /* YAHA LEFT RIGHT BHI AINT WORKING */
+    }
+}
+
+@media (width<=850px)
+{
+    #hero-text1
+    {
+        font-size:20px;
+        top:300px;
+    }
+    #hero-text2
+    {
+        font-size:40px;
+        top:340px;
+    }
+    #hero-subtext1
+    {
+      font-size: 20px;
+      /* position: absolute; */
+      left:50px;
+    }
+    #hero-subtext2
+    {
+      font-size: 20px;
+      left:50px;
+      /* WHY IS BOTTOM / TOP NOT WORKING?? */
+    }
+}
